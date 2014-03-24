@@ -5,7 +5,7 @@ class SessionsControllerTest < ActionController::TestCase
     get :new
     assert_response :success
   end
-	test "sould login" do
+	test "should login" do
 		dave = users(:one)
 		post :create, name: dave.name, password: 'secret'
 		assert_redirected_to admin_url
